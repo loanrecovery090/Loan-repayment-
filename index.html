@@ -128,83 +128,60 @@
 </head>
 <body>
 
-  <!-- Timer and Amount -->
-  <div style="max-width: 400px; margin: auto; font-family: sans-serif; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+  <div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
     <span style="color: #00bfff; font-size: 24px; font-weight: bold;">Quick payment</span>
     <span id="timer" style="font-size: 14px;">08:00</span>
   </div>
 
-  <div>
-    <p style="font-family: Arial, sans-serif; font-size: 12px; color: #00c0f1;">
-      1. Copy the UPI ID
-    </p>
-  </div>
+  <p style="font-size: 12px; color: #00c0f1;">1. Copy the UPI ID</p>
 
-  <!-- UPI ID + Copy Button -->
   <div class="upi-container">
     <span class="upi-label">UPI ID:</span>
-    <span class="upi-id" id="upiID">havishek2-1@okhdfcbank</span>
-    <button class="k2-copy-button" id="k2button">Copy UPI</button>
+    <span class="upi-id" id="maskedUPI">khush****@okicici</span>
+    <button class="k2-copy-button" id="copyButton">Copy UPI</button>
   </div>
 
-  <!-- QR Code -->
   <div class="qr-code">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=havishek2-1@okhdfcbank&pn=Mix%20Food%20Shop&cu=INR" alt="QR Code" width="150" height="150" />
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=khushikashyap8084@okicici&pn=Mix%20Food%20Shop&cu=INR" alt="QR Code" width="150" height="150" />
   </div>
 
-  <div>
-    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 10px;">
-      Please note that the QR code can only be paid once. Please do not pay repeatedly.
-    </p>
-  </div>
+  <p style="text-align: center; font-size: 10px;">Please note that the QR code can only be paid once. Please do not pay repeatedly.</p>
 
-  <div>
-    <p style="font-family: Arial, sans-serif; font-size: 12px; color: #00c0f1;">
-      2. Transfer the amount you want to recharge to us by UPI transfer 
-    </p>
-  </div>
+  <p style="font-size: 12px; color: #00c0f1;">2. Transfer the amount you want to recharge to us by UPI transfer</p>
 
-  <!-- Clickable Payment Options -->
   <div class="container">
-    <a class="button" href="upi://pay?pa=havishek2-1@okhdfcbank&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
+    <a class="button" href="upi://pay?pa=khushikashyap8084@okicici&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
       <span class="text">Pay with Paytm</span>
       <span class="arrow">&#8250;</span>
     </a>
-    <a class="button" href="upi://pay?pa=havishek2-1@okhdfcbank&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
+    <a class="button" href="upi://pay?pa=khushikashyap8084@okicici&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
       <span class="text">Pay with PhonePe</span>
       <span class="arrow">&#8250;</span>
     </a>
-    <a class="button" href="upi://pay?pa=havishek2-1@okhdfcbank&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
+    <a class="button" href="upi://pay?pa=khushikashyap8084@okicici&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
       <span class="text">Pay with Google Pay</span>
       <span class="arrow">&#8250;</span>
     </a>
-    <a class="button" href="upi://pay?pa=havishek2-1@okhdfcbank&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
+    <a class="button" href="upi://pay?pa=khushikashyap8084@okicici&pn=Mix%20Food%20Shop&cu=INR" target="_blank">
       <span class="text">Pay with UPI</span>
       <span class="arrow">&#8250;</span>
     </a>
   </div>
 
-  <div>
-    <p style="font-family: Arial, sans-serif; font-size: 12px; color: #00c0f1;">
-      3. Enter Ref No. (not a mobile number)
-    </p>
-  </div>
+  <p style="font-size: 12px; color: #00c0f1;">3. Enter Ref No. (not a mobile number)</p>
 
-  <!-- UTR Form -->
   <form class="utr-form">
     <label for="utr">UTR</label>
     <input type="text" id="utr" placeholder="12-digit UTR" maxlength="12" />
     <button type="submit">Submit</button>
   </form>
 
-  <!-- Message -->
   <p class="info-message">
     Important reminder: After completing the UPI transaction, please backfill RefNo./UTR No./Google Pay: UPI Transaction ID / Freecharge: Transaction ID (12 digits). If you do not backfill UTR, 100% of the deposit transaction will fail. Please be sure to backfill!!!
   </p>
 
-  <!-- Warning Message -->
-  <div style="display: flex; align-items: center; border: 1px solid #ccc; border-radius: 6px; padding: 6px; width: fit-content; font-family: Arial, sans-serif; margin: 20px auto;">
-    <div style="background-color: #00c0f1; padding: 12px; display: flex; align-items: center; justify-content: center; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+  <div style="display: flex; align-items: center; border: 1px solid #ccc; border-radius: 6px; padding: 6px; width: fit-content; margin: 20px auto;">
+    <div style="background-color: #00c0f1; padding: 12px; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
       <div style="width: 16px; height: 24px; border: 2px solid white;"></div>
     </div>
     <div style="padding: 0 10px; color: #00c0f1; font-size: 14px;">
@@ -234,21 +211,22 @@
 
   <!-- Copy Script -->
   <script>
-    function copyFunction() {
-      const copyText = document.getElementById("upiID").textContent;
+    const actualUPI = "khushikashyap8084@okicici";
+
+    function copyUPI() {
       const textArea = document.createElement('textarea');
-      textArea.textContent = copyText;
-      document.body.append(textArea);
+      textArea.textContent = actualUPI;
+      document.body.appendChild(textArea);
       textArea.select();
       document.execCommand("copy");
-      document.getElementById('k2button').innerText = "Copied";
+      document.getElementById('copyButton').innerText = "Copied";
       setTimeout(() => {
-        document.getElementById('k2button').innerText = "Copy UPI";
+        document.getElementById('copyButton').innerText = "Copy UPI";
       }, 1500);
-      textArea.remove();
+      document.body.removeChild(textArea);
     }
 
-    document.getElementById('k2button').addEventListener('click', copyFunction);
+    document.getElementById('copyButton').addEventListener('click', copyUPI);
   </script>
 
 </body>
